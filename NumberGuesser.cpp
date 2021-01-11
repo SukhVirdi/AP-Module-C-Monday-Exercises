@@ -23,13 +23,13 @@ void Start() {
   cout << "Please pick a difficulty level(1, 2 or 3)? ";
 
   c = 30;
-  //read the user's choice
+  //reads the user's choice
   cin >> c;
   cout << "\n";
 
   switch (c) {
   case '1':
-    //the random number will be between 0 and maxrand
+    //the random number will be between 0 and maxRandomNumber
     maxRandomNumber = 10;
     break;
   case '2':
@@ -46,7 +46,7 @@ void Start() {
   guessCount = 1;
   //init Rand() function
   srand((unsigned) time(NULL));
-  //secretNumber get a random value between 0 and maxrand
+  //secretNumber get a random value between 0 and maxRandomNumber
   secretNumber = rand() % maxRandomNumber;
   cout << "Great, I have randomly picked a number in the range 1 - " << maxRandomNumber << '\n';
   GetResults();

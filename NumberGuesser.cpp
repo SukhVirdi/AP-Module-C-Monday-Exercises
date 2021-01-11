@@ -14,80 +14,82 @@ int userGuess, secretNumber, guessCount, maxRandomNumber;
 char c;
 
 void Start() {
-	userGuess = 0;
-	secretNumber = 0;
-	guessCount = 0;
-	maxRandomNumber = 6;
+  userGuess = 0;
+  secretNumber = 0;
+  guessCount = 0;
+  maxRandomNumber = 6;
 
   //the user has to select a difficulty level	
-	cout << "Please pick a difficulty level(1, 2 or 3)? "; 
+  cout << "Please pick a difficulty level(1, 2 or 3)? ";
 
-	c = 30;
+  c = 30;
   //read the user's choice
-	cin >> c;
-	cout << "\n";
+  cin >> c;
+  cout << "\n";
 
-	switch (c) {
-		case '1':
-      //the random number will be between 0 and maxrand
-			maxRandomNumber = 10;
-			break;
-		case '2':
-			maxRandomNumber = 100;
-			break;
-		case '3':
-			maxRandomNumber = 1000;
-			break;
-		default:
-			exit(0);
-		break;
-	}
+  switch (c) {
+  case '1':
+    //the random number will be between 0 and maxrand
+    maxRandomNumber = 10;
+    break;
+  case '2':
+    maxRandomNumber = 100;
+    break;
+  case '3':
+    maxRandomNumber = 1000;
+    break;
+  default:
+    exit(0);
+    break;
+  }
   //number of guesses of the player
-	guessCount = 1;         
+  guessCount = 1;
   //init Rand() function
-	srand((unsigned)time(NULL)); 
+  srand((unsigned) time(NULL));
   //secretNumber get a random value between 0 and maxrand
-	secretNumber = rand() % maxRandomNumber;  
-	cout << "Great, I have randomly picked a number in the range 1 - " << maxRandomNumber << '\n';
-	GetResults();
+  secretNumber = rand() % maxRandomNumber;
+  cout << "Great, I have randomly picked a number in the range 1 - " << maxRandomNumber << '\n';
+  GetResults();
 }
 
 void GetResults() {
   char playAgain;
   cout << "What's your guess? \n";
   cin >> userGuess;
-  
 
   //if the user guess isn't correct, restart
-	if((userGuess>maxRandomNumber) || (userGuess<0)) { 
-		cout << "Error: number not between 0 and \n" << maxRandomNumber;
-		GetResults();
-	}
+  if ((userGuess > maxRandomNumber) || (userGuess < 0)) {
+    cout << "Error: number not between 0 and \n" << maxRandomNumber;
+    GetResults();
+  }
   //the user found the secret number
-	if(userGuess == secretNumber) {
-		cout << "Well done, the number was " << secretNumber << " - you got it in " << guessCount << " guesses\n";
+  if (userGuess == secretNumber) {
+    cout << "Well done, the number was " << secretNumber << " - you got it in " << guessCount << " guesses\n";
     cout << "Do you want to play again (Y/N)? ";
     cin >> playAgain;
 
     switch (playAgain) {
-      case 'Y': Start();
-      case 'N': cout << "No problem, see you later."; break;
+    case 'Y':
+      Start();
+    case 'N':
+      cout << "No problem, see you later.";
+      break;
     }
 
-	} else if(userGuess>secretNumber) {
-		cout << "Too high, guess again: \n";
-		guessCount = guessCount + 1;
-		GetResults();
+  } else if (userGuess > secretNumber) {
+    cout << "Too high, guess again: \n";
+    guessCount = guessCount + 1;
+    GetResults();
 
-	} else if(userGuess<secretNumber) {
-		cout << "Too low, guess again: \n";
-		guessCount = guessCount + 1;
-		GetResults();
-	}
+  } else if (userGuess < secretNumber) {
+    cout << "Too low, guess again: \n";
+    guessCount = guessCount + 1;
+    GetResults();
+  }
 }
 
 int main() {
-	cout << "Let's play ‘Guess the Number’ \n";
-	Start();
-	return 0;
+  cout << "Let's play ‘Guess the Number’ \n";
+  Start();
+  return 0;
 }

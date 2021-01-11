@@ -62,7 +62,7 @@ void getResults() {
 		cout << "Error: number not between 0 and \n" << maxRandomNumber;
 		getResults();
 	}
-  //the user found the secret number
+  //the user has found the secret number
 	if(userGuess == secretNumber) {
 		cout << "Well done, the number was " << secretNumber << " - you got it in " << guessCount << " guesses\n";
     cout << "Do you want to play again (Y/N)? ";

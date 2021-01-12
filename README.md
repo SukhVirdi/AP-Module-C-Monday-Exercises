@@ -41,3 +41,27 @@ Well done, most impressive! the number was 7 – you got it in 3 guesses
 Do you want to play again (Y/N)? N
 No problem, see you later.
 ```
+
+## Self-Service Checkout
+Working with multiple inputs and currency can introduce possible issues. I created a C++ Self-Service Checkout program. Using a loop to prompt the user for a quantity (integer) and then the ‘per item’ cost (float). Repeat the process until the quantity entered is <= 0.
+
+Once the user has finished entering items show the total cost of all the items and a new shopping tax (the tax has been introduced to help the country’s financial recovery from Covid); an example output is shown below.
+```
+Please enter a quantity for item 1 (or 0 to finish): 3
+Please enter item 1 cost: 0.99
+
+Please enter a quantity for item 2 (or 0 to finish): 2
+Please enter item 2 cost: 1.50
+
+Please enter a quantity for item 3 (or 0 to finish): 1
+Please enter item 2 cost: 2.99
+
+Please enter a quantity for item 3 (or 0 to finish): 0
+Thank you.
+
+Subtotal: £8.96
+Shopping Tax: £0.4928
+
+Total: £8.4528
+
+```

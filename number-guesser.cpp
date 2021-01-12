@@ -64,7 +64,7 @@ void getResults() {
 	}
   //the user has found the secret number
 	if(userGuess == secretNumber) {
-		cout << "Well done, the number was " << secretNumber << " - you got it in " << guessCount << " guesses\n";
+		cout << "Well done, most impressive! the number was " << secretNumber << " - you got it in " << guessCount << " guesses\n";
     cout << "Do you want to play again (Y/N)? ";
     cin >> playAgain;
 

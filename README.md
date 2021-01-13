@@ -24,6 +24,23 @@ Your choice: C
 60.1 degrees Fahrenheit is 15.6111
 ```
 
+
+## Exercise 2: Temperature Conversion
+When working in a global environment (and building on the work I completed in exercise 2) there is often a requirement to present information using different standards – in this exercise I was required to convert values between imperial and metric units.
+
+I created a C++ program that prompts the user for the length and width of a room in feet then display the area in both feet and meters squared; the expected output is shown below:
+```
+What is the length of the room in feet? 15
+What is the width of the room in feet? 20
+
+Your room’s dimension is 15 by 20 feet, the area is:
+300 square foot
+27.809 square meters
+```
+
+
+
+
 ## Number Guesser
 A C++ ‘guess the number’ game that supports three levels of difficulty; level 1 is limited to numbers 1..10, level 2 is limited to numbers 1..100 and level 3 is limited to numbers 1..1000. It prompts the user to select a difficulty level before the game begins. The program picks a random number and prompts the player to ‘guess’; each time the player ‘guesses’ the program provides a hint (e.g., too low, too high).
 

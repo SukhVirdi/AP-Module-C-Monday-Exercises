@@ -25,7 +25,7 @@ Your choice: C
 ```
 
 
-## Exercise 2: Temperature Conversion
+## Exercise 3: Area of a Rectangle
 When working in a global environment (and building on the work I completed in exercise 2) there is often a requirement to present information using different standards – in this exercise I was required to convert values between imperial and metric units.
 
 I created a C++ program that prompts the user for the length and width of a room in feet then display the area in both feet and meters squared; the expected output is shown below:

@@ -80,5 +80,4 @@ Subtotal: £8.96
 Shopping Tax: £0.4928
 
 Total: £8.4528
-
 ```
